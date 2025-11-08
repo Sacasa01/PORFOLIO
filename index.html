@@ -1,58 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="[Your Name] - Web Developer Portfolio">
     <meta name="author" content="Your Name">
-    
+
     <title>Your Name | Portfolio</title>
-    
+
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+
     <!-- NAVBAR SECTION -->
     <nav class="navbar">
         <div class="nav-container">
-            <!-- Logo/Brand -->
+            <!-- Logo/Brand (Home button) -->
             <div class="nav-logo">
-                <a href="#home">Your Name</a>
+                <a href="#home" id="logo-btn">Your Name</a>
             </div>
-            
+
             <!-- Hamburger Menu Icon (for mobile) -->
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            
-            <!-- Navigation Links -->
+
+            <!-- Navigation Links (Center) -->
             <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
                 </li>
             </ul>
+
+
+            <!-- Right Icons -->
+            <div class="nav-icons">
+                <button class="icon-btn" id="search-btn" title="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+
+                <button class="icon-btn" id="volume-btn" title="Volume">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <path d="M15.54 5.47A9 9 0 0 1 19 13a9 9 0 0 1-3.46 7.53"></path>
+                    </svg>
+                </button>
+
+                <button class="icon-btn" id="theme-btn" title="Toggle dark/light mode">
+                    <svg width="20" height="20" class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg width="20" height="20" class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" style="display: none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <button class="icon-btn" id="lang-btn" title="Select language">
+                        <span id="lang-text">EN</span>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button class="lang-option" data-lang="en">
+                            <span class="lang-flag">🇬🇧</span>
+                            <span>English</span>
+                        </button>
+                        <button class="lang-option" data-lang="es">
+                            <span class="lang-flag">🇪🇸</span>
+                            <span>Español</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
     <!-- HERO SECTION (placeholder) -->
     <section id="home" class="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>This is where your content will be.</p>
+        <h1 data-i18n="hero.title">Welcome to My Portfolio</h1>
+        <p data-i18n="hero.description">This is where your content will be.</p>
     </section>
-    
+
     <!-- Link to JavaScript file -->
     <script src="scripts.js"></script>
 </body>
+
 </html>
